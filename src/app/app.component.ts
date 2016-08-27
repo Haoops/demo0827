@@ -18,11 +18,6 @@ export class AppComponent {
     this.data.splice(i, 1);
   }
 
-  noticeDel(title) {
-    alert('文章：【' + title + '】\r已成功刪除');
-  }
-
-
   data: any[] = [
     {
       "href": "http://blog.miniasp.com/post/2016/04/30/Visual-Studio-Code-from-Command-Prompt-notes.aspx",
