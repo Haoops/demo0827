@@ -9,11 +9,7 @@ export class AppComponent {
   title = 'app works!';
   keyword = '';
 
-  doSearch($event: KeyboardEvent){
-    let input = $event.target as HTMLInputElement;
-      if ($event.keyCode == 13 /* Enter Key */) {
-
-        this.keyword = input.value;
-      }
+  doSearch(keyword: string){
+        this.keyword = keyword;
   }
 }

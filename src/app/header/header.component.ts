@@ -17,20 +17,30 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  changeTitle(value){
+  changeTitle(value) {
 
     this.title = value;
 
   }
 
-  plusOrMinusOne($event: MouseEvent){
+  plusOrMinusOne($event: MouseEvent) {
     //﹝判斷﹞shiftKey 是否被按下
     if ($event.shiftKey) {
       // num - 1
       this.num -= 1;
-    }else {
+    } else {
       // num + 1
       this.num += 1;
     }
+  }
+
+  getClass() {
+    return { 'red': (this.num % 2) == 0 };
+
+  }
+
+  getStyle() {
+    return { 'font-size': (this.num) + 10 + 'px' }
+
   }
 }
