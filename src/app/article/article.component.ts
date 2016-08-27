@@ -11,7 +11,11 @@ export class ArticleComponent implements OnInit {
   item: any;
 
   @Output()
-  delete = new EventEmitter<any>()
+  delete = new EventEmitter<any>();
+
+  @Output()
+  notice = new EventEmitter();
+
 
   constructor() { }
 

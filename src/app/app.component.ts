@@ -18,6 +18,10 @@ export class AppComponent {
     this.data.splice(i, 1);
   }
 
+  noticeDel(title) {
+    alert('文章：【' + title + '】\r已成功刪除');
+  }
+
 
   data: any[] = [
     {
