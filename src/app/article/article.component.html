@@ -9,9 +9,9 @@
       <span class="post-category"><i class="glyphicon glyphicon-folder-close"></i><a [href]="item['category-link']">{{item.category}}</a></span>
     </div>
   </header>
-  <section class="post-body text" [innerHTML]="item.summary|highlight:keyword">
+  <section class="post-body text" [innerHTML]="item.summary|highlight:datasvc.keyword">
   </section>
-  <span><input type="button" class="btn" value="刪除文章" (click)="delete.emit(item);"/></span>
+  <span><input type="button" class="btn" value="刪除文章" (click)="datasvc.delArticle(item);"/></span>
 
   <pre>
     {{item|json}}

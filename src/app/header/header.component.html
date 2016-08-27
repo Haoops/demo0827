@@ -27,7 +27,7 @@
       <img src="/assets/images/logo.png" class="pull-left logo" alt="The Will Will Web" [title]="imgTitle" (click)="changeTitle('這是測試 onClick Event');">
 
       <hgroup class="pull-left">
-        <h1><a href="http://blog.miniasp.com/">{{title|uppercase}}</a></h1>
+        <h1><a href="http://blog.miniasp.com/">{{title}}</a></h1>
         <h3 (click)="plusOrMinusOne($event);" [ngClass]="getClass()" [ngStyle]="getStyle()">
           {{subTitle}} + {{num}}</h3>
       </hgroup>

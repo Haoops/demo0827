@@ -1,27 +1,19 @@
-import { Component, OnInit, OnChanges, Input, Output, EventEmitter } from '@angular/core';
+import { DataService } from './../data.service';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-article',
   templateUrl: 'article.component.html',
   styleUrls: ['article.component.css']
 })
-export class ArticleComponent implements OnInit, OnChanges {
+export class ArticleComponent implements OnInit {
 
   @Input()
   item: any;
 
-  @Input()
-  keyword: string;
-
-  @Output()
-  delete = new EventEmitter<any>();
-
-  constructor() { }
+  constructor(private datasvc: DataService) { }
 
   ngOnInit() {
-  }
-
-  ngOnChanges() {
   }
 
 }

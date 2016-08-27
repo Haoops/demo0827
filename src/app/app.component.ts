@@ -9,20 +9,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   title = 'Angular 2 @ 2016/08/27';
-  keyword = '';
-  data: any[];
 
   doSearch(keyword: string) {
-    this.keyword = keyword;
+    this.datasvc.keyword = keyword;
   }
 
-  delArticle(item) {
-    let i = this.data.indexOf(item);
-    this.data.splice(i, 1);
-  }
+  constructor(private datasvc: DataService) {}
 
-  constructor(private datasvc: DataService) {
-    this.data = datasvc.data;
+  ngOnInit() {
   }
 
 }
