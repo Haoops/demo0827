@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  //'Angular 2 @ 2016/08/27'
 
-  title = 'Angular 2 @ 2016/08/27';
+  @Input()
+  title: string;
   imgTitle = 'This is Will 保哥';
   subTitle = '記載著 Will 在網路世界的學習心得與技術分享';
   num = 1;

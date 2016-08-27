@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'Angular 2 @ 2016/08/27 - 1';
   keyword = '';
 
   doSearch(keyword: string) {
