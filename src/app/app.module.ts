@@ -5,19 +5,22 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ArticleComponent } from './article/article.component';
+import { HighlightPipe } from './highlight.pipe';
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ArticleComponent
+    ArticleComponent,
+    HighlightPipe
   ],
   imports: [
     BrowserModule,
     CommonModule,
     FormsModule
   ],
-  providers: [],
+  providers: [DataService],
   entryComponents: [AppComponent],
   bootstrap: [AppComponent]
 })
