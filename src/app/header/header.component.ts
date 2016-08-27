@@ -23,7 +23,12 @@ export class HeaderComponent implements OnInit {
 
   }
 
+  showIcons = true;
+
   plusOrMinusOne($event: MouseEvent) {
+
+    this.showIcons = !this.showIcons;
+
     //﹝判斷﹞shiftKey 是否被按下
     if ($event.shiftKey) {
       // num - 1
