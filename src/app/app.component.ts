@@ -7,6 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+  keyword = '';
 
-  keyword = 'default';
+  doSearch($event: KeyboardEvent){
+    let input = $event.target as HTMLInputElement;
+      if ($event.keyCode == 13 /* Enter Key */) {
+
+        this.keyword = input.value;
+      }
+  }
 }
